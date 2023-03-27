@@ -1,8 +1,8 @@
 def IsEven(n):
     if n%2==0:
         return True
-    else:
-        return False
+    return False
+
 first=1
 second=2
 sum=0

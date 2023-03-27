@@ -1,10 +1,11 @@
-def etehad(a,b,c):
-    if a<b<c and (a+b+c)==1000 and (a**2)+(b**2)==(c**2) :
-        return True
-for a in range(1000):
-    for b in range(1000):
-        for c in range(1000):
-            if (etehad(a,b,c)):
-                print(a,b,c,a*b*c)
-                break
-print('Finish')
+f = 0
+for a in range(998,1,-1):
+    if f == 1:
+        break
+    for b in range(1,999):
+        if f == 1:
+            break
+        if ((10**6 + (2*a*b) - (2000*(a+b))) == 0) :
+            print(a,b,(1000-(a+b)),a*b*(1000-(a+b)),sep='\t')
+            f = 1
+            break

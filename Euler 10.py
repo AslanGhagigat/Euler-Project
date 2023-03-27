@@ -1,15 +1,22 @@
-def is_prime(n):
-    aval=True
-    for i in range(2,int((n**0.5)+1)):
-        if n % i ==0:
-            aval=False
+p = 2 * 10 ** 6
+prime = 2
+
+prime_list = [2]
+for i in range(3,p+1):
+    n = int((i**0.5)//1)+1
+    for j in prime_list:
+        if j > n:
+            prime_list.append(i)
+            prime += i
             break
-    return aval
+        if i%j == 0:
+            break
+    else:
+        prime_list.append(i)
+        prime += i
 
-p=int(input('please input your maximum number: '))
-prime=[]
+print(prime,sep='\n')
 
-for i in range(2,p+1):
-    if (is_prime(i)):
-        prime.append(i)
-print(sum(prime))
+
+
+

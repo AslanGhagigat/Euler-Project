@@ -1,6 +1,13 @@
-from math import lcm
-maxnum = int(input("please input maximum number: "))
-kmm = 1
-for i in range(1,maxnum+1):
-    kmm = lcm(kmm,i)
-print(kmm)
+def kmm(x,y):
+    x1 = x
+    y1 = y
+    while(y):
+        x, y = y, x%y
+    bmm = x
+    return (x1*y1)//bmm
+
+KMM = 1
+for i in range(1,21):
+    KMM = kmm(KMM , i)
+
+print('kmm: ',KMM)

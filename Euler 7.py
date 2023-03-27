@@ -1,16 +1,16 @@
-x=int(input('please input your maximum number: '))
-def is_prime(i):
-    aval=True
-    for n in range(2,i):
-        if i % n ==0:
-            aval=False
-            break
-    return aval
-prime_sum=0
-last_prime=0
-for i in range(1,x+1):
-    if (is_prime(i)):
-        prime_sum=prime_sum+1
-        #prime_sum=i
-        if prime_sum==x:
-            print(i)
+def Is_Prime(x):
+    for i in range(2,int((x**0.5)//1)+1):
+        if x%i == 0:
+            return False
+    return True
+
+
+count = 0
+num = 1
+while count != 10001:
+    num += 1
+    if Is_Prime(num):
+        count += 1
+    
+print(num)
+
